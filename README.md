@@ -1,144 +1,161 @@
-# Task Automation Script
+# Class Castor / LAN Classroom - Web Prototype
 
-A comprehensive Python script that demonstrates three common automation tasks using standard libraries.
+A web-based prototype of **Class Castor** (LAN Classroom) - a real-time classroom/meeting collaboration system. This prototype demonstrates the UI/UX and frontend functionality without backend integration.
 
-## Features
+![Python](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat&logo=bootstrap&logoColor=white)
 
-This script includes three automation examples:
+## 🌟 Features
 
-1. **File Management**: Move all .jpg files from one folder to another
-2. **Text Processing**: Extract email addresses from a text file and save them to a new file
-3. **Web Scraping**: Scrape the title of a webpage and save it to a file
+### Core Features (Prototype)
 
-## Requirements
+- **Room Management**
+  - Create rooms with auto-generated 6-character codes
+  - Join existing rooms with room codes
+  - Room code validation
 
-- Python 3.6+
-- requests library (for web scraping)
+- **Real-time UI Components**
+  - Modern brown/milk themed interface
+  - Participant list sidebar
+  - Text chat panel
+  - Control bar with action buttons
+  - Screen share viewer area
+  - Camera view area
 
-## Installation
+- **Interactive Controls**
+  - Mute/Unmute button
+  - Screen sharing toggle
+  - Camera toggle
+  - Raise hand feature
+  - File transfer UI
+  - Clipboard sharing UI
 
-1. Clone or download this repository
-2. Install required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+- **Moderator Features (UI)**
+  - Mute participants
+  - Kick participants
+  - Spotlight participants
+  - Participant management
 
-## Usage
+- **Demo Mode**
+  - Simulates multiple participants
+  - Mock chat messages
+  - Simulated screen sharing
+  - Interactive UI demonstrations
 
-### Running the Complete Demo
+## 🚀 Quick Start
 
+### Installation
+
+1. Clone or download this repository:
 ```bash
-python task_automation.py
+git clone https://github.com/YOUR_USERNAME/class-castor-prototype.git
+cd class-castor-prototype
 ```
 
-This will:
-- Create sample files for testing
-- Execute all three automation tasks
-- Generate output files in the `output/` directory
-- Create detailed logs in `automation.log`
+2. Open `index.html` in a modern web browser:
+   - Simply double-click `index.html`, or
+   - Use a local server (recommended):
+     ```bash
+     # Python 3
+     python -m http.server 8000
+     
+     # Node.js (http-server)
+     npx http-server
+     
+     # PHP
+     php -S localhost:8000
+     ```
 
-### Individual Task Usage
+3. Access the application:
+   - Open browser and navigate to `http://localhost:8000`
 
-You can also use the `TaskAutomation` class directly in your own scripts:
-
-```python
-from task_automation import TaskAutomation
-
-automation = TaskAutomation()
-
-# Move .jpg files
-automation.move_jpg_files('source_folder', 'destination_folder')
-
-# Extract emails
-automation.extract_emails('input.txt', 'emails.txt')
-
-# Scrape webpage title
-automation.scrape_webpage_title('https://example.com', 'title.txt')
-```
-
-## Task Details
-
-### 1. File Moving (.jpg files)
-- **Function**: `move_jpg_files(source_folder, destination_folder)`
-- **Features**:
-  - Handles both .jpg and .jpeg extensions (case insensitive)
-  - Creates destination folder if it doesn't exist
-  - Provides detailed logging
-  - Graceful error handling
-
-### 2. Email Extraction
-- **Function**: `extract_emails(input_file, output_file)`
-- **Features**:
-  - Uses comprehensive regex pattern for email validation
-  - Removes duplicate emails while preserving order
-  - Handles empty files gracefully
-  - UTF-8 encoding support
-
-### 3. Web Scraping
-- **Function**: `scrape_webpage_title(url, output_file)`
-- **Features**:
-  - Validates URL format
-  - Handles network timeouts and errors
-  - Cleans HTML entities from titles
-  - Includes timestamp in output
-
-## Error Handling
-
-The script includes comprehensive error handling for:
-- Missing files and directories
-- Network connectivity issues
-- Invalid URLs
-- Empty files
-- Permission errors
-- Encoding issues
-
-## Output
-
-All results are saved in the `output/` directory:
-- `moved_images/` - Contains moved .jpg files
-- `extracted_emails.txt` - List of extracted email addresses
-- `scraped_title.txt` - Webpage title with metadata
-
-## Logging
-
-Detailed logs are written to `automation.log` and displayed in the console, including:
-- Task execution status
-- Error messages and stack traces
-- File operation details
-- Network request information
-
-## Key Concepts Demonstrated
-
-- **File Handling**: Using `os`, `shutil`, and `pathlib` for file operations
-- **Regular Expressions**: Pattern matching for email extraction and HTML parsing
-- **Web Scraping**: HTTP requests and HTML parsing
-- **Error Handling**: Try-catch blocks and graceful failure handling
-- **Logging**: Comprehensive logging for debugging and monitoring
-- **Object-Oriented Design**: Clean class structure for reusability
-
-## Example Output
+## 📁 Project Structure
 
 ```
-============================================================
-TASK AUTOMATION SCRIPT
-============================================================
-
-Creating sample files for demonstration...
-
-TASK 1: Moving .jpg files
-------------------------------
-✅ Task 1 completed successfully!
-
-TASK 2: Extracting email addresses
------------------------------------
-✅ Task 2 completed successfully!
-
-TASK 3: Scraping webpage title
-------------------------------
-✅ Task 3 completed successfully!
-
-============================================================
-AUTOMATION COMPLETE!
-Check the 'output' folder for results and 'automation.log' for detailed logs.
-============================================================
+class-castor-prototype/
+├── index.html          # Main application page
+├── css/
+│   └── style.css       # Custom styling with brown/milk theme
+├── js/
+│   └── app.js          # Main application logic and mock functionality
+├── assets/             # Images and icons (if needed)
+├── README.md           # This file
+└── .gitignore          # Git ignore rules
 ```
+
+## 🎨 UI Features
+
+### Color Theme
+- **Primary Brown**: Rich, warm brown tones
+- **Milk/Cream**: Soft, light cream accents
+- **Modern Design**: Clean, minimalist interface
+
+### Layout Components
+- **Top Bar**: Room info, connection status, user name
+- **Sidebar**: Participant list with status indicators
+- **Main Area**: Screen share viewer and camera feeds
+- **Chat Panel**: Message history and input
+- **Control Bar**: Action buttons (mute, share, camera, etc.)
+
+## 🧪 Demo Mode
+
+The prototype includes a demo mode that simulates:
+- Multiple participants joining/leaving
+- Chat messages from different users
+- Screen sharing preview
+- Participant status changes
+- File transfer notifications
+
+### Using Demo Mode
+
+1. Click "Create Room" or "Join Room"
+2. Enter a name (or use default)
+3. The demo will automatically simulate:
+   - Other participants joining
+   - Chat messages appearing
+   - Screen sharing activation
+   - Participant interactions
+
+## 🛠️ Technology Stack
+
+- **HTML5**: Structure and semantic markup
+- **CSS3**: Custom styling and animations
+- **JavaScript (ES6+)**: Application logic and interactivity
+- **Bootstrap 5**: Responsive grid and components
+- **Font Awesome**: Icons (via CDN)
+
+## 📝 Browser Compatibility
+
+- Chrome/Edge (latest)
+- Firefox (latest)
+- Safari (latest)
+- Opera (latest)
+
+## 🔮 Future Implementation
+
+This prototype demonstrates the frontend UI/UX. For full functionality, the following would need to be implemented:
+
+- **Backend Signaling Server**: WebSocket server for room management
+- **WebRTC Integration**: Real peer-to-peer connections
+- **Media Capture**: Actual screen/camera/audio capture APIs
+- **File Transfer**: Real file chunking and transfer
+- **Database**: User accounts, room persistence, history
+
+## 📄 License
+
+This project is a prototype demonstration. License to be determined.
+
+## 🤝 Contributing
+
+This is a prototype project. Contributions and suggestions are welcome!
+
+## 📧 Contact
+
+For questions or feedback, please open an issue on GitHub.
+
+---
+
+**Note**: This is a frontend prototype without backend functionality. All features are simulated for demonstration purposes.
+
